@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- bases -->
+  <ThingDef Name="FootwearMakeableBase" ParentName="ApparelMakeableBase" Abstract="True">
+    <thingCategories>
+      <li>Footwear</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!-- ========== Slippers ========== -->
+
+  <ThingDef ParentName="FootwearMakeableBase">
+    <defName>Apparel_MopSlippers</defName>
+    <thingClass>MopSlippers.ThingDef_MopSlippers</thingClass>
+    <label>mop slippers</label>
+    <description>Mops combined with slippers so you can clean while you walk. Deteriorates slightly every time a tile is cleaned.</description>
+    <graphicData>
+      <texPath>Things/MopSlippers</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <WorkToMake>1400</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.05</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
+</Defs>
